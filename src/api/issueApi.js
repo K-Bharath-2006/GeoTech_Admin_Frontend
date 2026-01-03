@@ -11,7 +11,7 @@ export const getOfficerIssues = async () => {
   // 🔥 ALWAYS get fresh token
   const token = await user.getIdToken(true);
 
-  const res = await fetch("http://localhost:8080/api/issues/all", {
+  const res = await fetch("https://geotech-backend.onrender.com/api/issues/all", {
     headers: {
       Authorization: `Bearer ${token}`,
     },
